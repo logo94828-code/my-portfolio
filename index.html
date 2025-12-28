@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth; scroll-padding-top: 80px;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flux - High-Performance Web Ecosystems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              midnight: '#0a1128',
+            },
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #ffffff;
+        background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+        background-size: 32px 32px;
+        transition: background-color 0.5s ease, color 0.5s ease;
+      }
+      .dark body {
+        background-color: #0a1128;
+        background-image: radial-gradient(#1e3a8a 1px, transparent 1px);
+      }
+      .gradient-blur {
+        background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+      }
+      .dark .gradient-blur {
+        background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.1) 0%, rgba(10, 17, 40, 0) 70%);
+      }
+      .card-shadow {
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+      }
+      .dark .card-shadow {
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      }
+      @keyframes float-1 { 0%, 100% { transform: translateY(0px) rotate(-3deg); } 50% { transform: translateY(-15px) rotate(-1deg); } }
+      @keyframes float-2 { 0%, 100% { transform: translateY(0px) rotate(2deg); } 50% { transform: translateY(-20px) rotate(4deg); } }
+      @keyframes float-3 { 0%, 100% { transform: translateY(0px) scale(1); } 50% { transform: translateY(-10px) scale(1.02); } }
+      .animate-float-1 { animation: float-1 6s ease-in-out infinite; }
+      .animate-float-2 { animation: float-2 5s ease-in-out infinite; }
+      .animate-float-3 { animation: float-3 7s ease-in-out infinite; }
+      @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-3px); } }
+      .animate-float { animation: float 4s ease-in-out infinite; }
+      @keyframes tilt { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
+      .animate-tilt { animation: tilt 3s ease-in-out infinite; }
+      @keyframes particle-explode { 0% { transform: translate(0, 0) scale(1); opacity: 1; filter: brightness(2); } 100% { transform: translate(var(--tw-translate-x), var(--tw-translate-y)) scale(0); opacity: 0; } }
+      .particle { position: fixed; pointer-events: none; border-radius: 50%; z-index: 9999; animation: particle-explode 0.8s cubic-bezier(0.1, 0.8, 0.3, 1) forwards; box-shadow: 0 0 8px currentColor; }
+      
+      /* Pricing Card Animations */
+      @keyframes shimmer {
+        0% { transform: translateX(-100%) skewX(-15deg); }
+        100% { transform: translateX(200%) skewX(-15deg); }
+      }
+      .pricing-shimmer {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+        animation: shimmer 3s infinite;
+      }
+      @keyframes float-slow {
+        0%, 100% { transform: translateY(0) scale(1.05); }
+        50% { transform: translateY(-15px) scale(1.06); }
+      }
+      .animate-float-pricing {
+        animation: float-slow 4s ease-in-out infinite;
+      }
+
+      /* Snowfall Animations */
+      @keyframes fall {
+        0% { transform: translateY(-10vh); }
+        100% { transform: translateY(110vh); }
+      }
+      @keyframes sway {
+        0%, 100% { transform: translateX(calc(-1 * var(--sway-distance, 15px))); }
+        50% { transform: translateX(var(--sway-distance, 15px)); }
+      }
+      .snowflake-container {
+        position: fixed;
+        top: -20px;
+        pointer-events: none;
+        z-index: 5;
+        animation: fall linear infinite;
+      }
+      .snowflake-inner {
+        background: white;
+        border-radius: 50%;
+        animation: sway ease-in-out infinite;
+      }
+
+      @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+      .animate-marquee { display: flex; width: max-content; animation: marquee 30s linear infinite; }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="text-zinc-950 dark:text-zinc-50 antialiased overflow-x-hidden transition-colors duration-500">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
