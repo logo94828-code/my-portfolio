@@ -1092,7 +1092,7 @@ const Footer: React.FC<{ onOpenModal: () => void }> = ({ onOpenModal }) => (
                 </a>
               </li>
               <li>
-                <a href="https://www.instagramcom/flux.studiio/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-6 text-white text-[15px] font-[800] uppercase tracking-[0.05em] group transition-all hover:translate-x-1">
+                <a href="https://www.instagram.com/flux.studiio/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-6 text-white text-[15px] font-[800] uppercase tracking-[0.05em] group transition-all hover:translate-x-1">
                   <Instagram className="w-6 h-6 stroke-[2] text-white transition-all group-hover:text-pink-500 group-hover:scale-125 group-hover:-rotate-12" />
                   INSTAGRAM
                 </a>
