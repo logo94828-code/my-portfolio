@@ -1066,7 +1066,7 @@ const Footer: React.FC<{ onOpenModal: () => void }> = ({ onOpenModal }) => (
                 </a>
               </li>
               <li>
-                <a href="mailto:fluwxworkspace0@gmail.com" className="flex items-center gap-6 text-white text-[15px] font-[800] uppercase tracking-[0.05em] group hover:text-blue-400 transition-all hover:translate-x-1">
+                <a href="mailto:fluxworkspace0@gmail.com" className="flex items-center gap-6 text-white text-[15px] font-[800] uppercase tracking-[0.05em] group hover:text-blue-400 transition-all hover:translate-x-1">
                   <Mail className="w-4 h-4 text-zinc-300 group-hover:text-blue-400 group-hover:scale-125 transition-all" />
                   Email Us
                 </a>
@@ -1106,7 +1106,7 @@ const Footer: React.FC<{ onOpenModal: () => void }> = ({ onOpenModal }) => (
         <p className="text-blue-900 text-[9px] font-black uppercase tracking-[0.4em]">© 2024 FLUX CREATIVE STUDIO. ALL RIGHTS RESERVED.</p>
         <div className="flex gap-10">
            <p className="text-blue-900 text-[9px] font-black uppercase tracking-[0.4em] hover:text-white transition-colors cursor-pointer">+91 9868587951</p>
-           <p className="text-blue-900 text-[9px] font-black uppercase tracking-[0.4em] hover:text-white transition-colors cursor-pointer">fluwxworkspace0@gmail.com</p>
+           <p className="text-blue-900 text-[9px] font-black uppercase tracking-[0.4em] hover:text-white transition-colors cursor-pointer">fluxworkspace0@gmail.com</p>
         </div>
       </div>
     </div>
@@ -1133,7 +1133,7 @@ const FloatingContact: React.FC = () => {
             <span className="text-xs font-black text-zinc-900 dark:text-blue-100">Get a quote via WhatsApp</span>
             <ChevronRight className="w-4 h-4 text-zinc-300 group-hover:text-emerald-500 group-hover:translate-x-1 transition-all" />
           </a>
-          <a href="mailto:fluwxworkspace0@gmail.com" className="flex items-center justify-between w-full bg-white dark:bg-[#0c1532] border border-zinc-100 p-4 rounded-xl hover:bg-blue-50/30 transition-all group hover:scale-[1.02] active:scale-95">
+          <a href="mailto:fluxworkspace0@gmail.com" className="flex items-center justify-between w-full bg-white dark:bg-[#0c1532] border border-zinc-100 p-4 rounded-xl hover:bg-blue-50/30 transition-all group hover:scale-[1.02] active:scale-95">
             <span className="text-xs font-black text-zinc-900 dark:text-blue-100">Email our team directly</span>
             <Mail className="w-4 h-4 text-zinc-300 group-hover:text-blue-600 group-hover:scale-110 transition-all" />
           </a>
